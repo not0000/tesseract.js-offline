@@ -1,3 +1,4 @@
-node_modules
-*.traineddata
+# 要上線佈署，這兩個先移除
+# node_modules
+# *.traineddata
 /browser/npm-debug.log
