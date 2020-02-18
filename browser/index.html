@@ -5,6 +5,7 @@
   <title>Tesseract.js Offline</title>
   <script src="../node_modules/tesseract.js/dist/tesseract.min.js"></script>
   <script>
+ 
     const { createWorker } = Tesseract;
     const worker = createWorker({
       workerPath: '../node_modules/tesseract.js/dist/worker.min.js',
@@ -15,12 +16,14 @@
 
     (async () => {
       await worker.load();
-      await worker.loadLanguage('eng');
-      await worker.initialize('eng');
-      const { data: { text } } = await worker.recognize('../images/testocr.png');
-      console.log(text);
+      await worker.loadLanguage('chi_tra');
+      await worker.initialize('chi_tra');
+      const { data: { text } } = await worker.recognize('../images/testocr3.png');
+
+      console.log(text.replace(/ /g,""));
       await worker.terminate();
     })();
+	
   </script>
 </head>
 <body>

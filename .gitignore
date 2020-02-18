@@ -1,2 +1,3 @@
 node_modules
 *.traineddata
+/browser/npm-debug.log

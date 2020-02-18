@@ -8,9 +8,9 @@ const worker = createWorker({
 
 (async () => {
   await worker.load();
-  await worker.loadLanguage('eng');
-  await worker.initialize('eng');
-  const { data: { text } } = await worker.recognize(path.join(__dirname, '..', 'images', 'testocr.png'));
+  await worker.loadLanguage('chi_tra');
+  await worker.initialize('chi_tra');
+  const { data: { text } } = await worker.recognize(path.join(__dirname, '..', 'images', 'testocr1.png'));
   console.log(text);
   await worker.terminate();
 })();
